@@ -1,0 +1,16 @@
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+  margin-top: 20px;
+}
+.products-table-container{
+  width: 60%;
+}
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.products {
+  margin-bottom: 40px;
+}

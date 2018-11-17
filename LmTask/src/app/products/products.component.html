@@ -1,0 +1,47 @@
+<div class="products container">
+  <h2>Товар</h2>
+  <div class="products-table-container">
+    <table class="table table-hover table-sm">
+      <thead class="thead-light">
+      <tr>
+        <td></td>
+        <td>Категория</td>
+        <td>Товар</td>
+        <td>Цена</td>
+      </tr>
+      </thead>
+      <tr *ngFor="let product of _products">
+        <td><input #selectedCheckbox
+                   [checked]="product.isSelected"
+                   type="checkbox"
+                   (change)="_isSelect(product, selectedCheckbox.checked)"/>
+        </td>
+        <td>{{product.group}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="btn btn-outline-success btn-sm" (click)="_click()">В корзину</button>
+
+  <div *ngIf="_showOrder">
+    <h3>Заказ:</h3>
+    <div class="products-table-container">
+      <table class="table table-hover table-sm">
+        <tr>
+          <td>Категория</td>
+          <td>Товар</td>
+          <td>Цена</td>
+        </tr>
+        <tr *ngFor="let selectedProduct of _selectedProducts">
+          <td>{{selectedProduct.group}}</td>
+          <td>{{selectedProduct.name}}</td>
+          <td>{{selectedProduct.price}}</td>
+        </tr>
+      </table>
+
+      <button class="btn btn-outline-success btn-sm">Купить</button>
+    </div>
+  </div>
+</div>

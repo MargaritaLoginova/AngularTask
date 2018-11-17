@@ -1,0 +1,9 @@
+.lm-footer {
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: #DCDCDC;
+}
